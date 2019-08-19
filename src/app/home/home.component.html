@@ -1,0 +1,32 @@
+<div class="container">
+  <div id="wrapper">
+    <input class="textbox" type="text" style="text-align:center" [(ngModel)]="showNum"
+      (keyup)="checkNum($event)">
+    <textarea class="resultbox" type="text" [(ngModel)]="resultNum" readonly="true"></textarea>
+    <div class="btn-area">
+        <li style="list-style-type: none;" *ngFor="let btn of btns">
+          <input type="button" value={{btn.value}} (click)="inputCmd(btn.num)">
+        </li>
+    </div>
+    <div class="timerbox" style="text-align:center">
+      <span>{{curTimer}}</span> seconds started , <span>{{count}}</span> chances left!
+    </div>
+    <div class='player' *ngIf="isShow">
+      <input type="text" placeholder="Input Your Name" [(ngModel)]="playerName" (keypress)="($event.which === 13)?gameStart():0">
+      <input type="button" class='button' value="Game Start" (click)="gameStart()">
+    </div>
+    <div class='dialog' *ngIf="isDialogShow">
+      <textarea class='dialogTitle' type="text" style="text-align:center" readonly="true" [(ngModel)]="dialogT"></textarea>
+      <textarea class='dialogContent' type="text" readonly="true">{{dialogC}}</textarea>
+      <input type="button" class="buttonOK" value="OK" (click)="inputOK()">
+    </div>
+    <div class='dialog' *ngIf="isDialog2Show">
+      <textarea class='dialogTitle' type="text" style="text-align:center" readonly="true" [(ngModel)]="dialog2T"></textarea>
+      <textarea class='dialogContent' type="text" readonly="true" [(ngModel)]="dialog2C"></textarea>
+      <div class='buttonH'>
+        <input type="button" class="buttonOK" value="Continue" (click)="inputContinue()">
+        <input type="button" class="buttonOK" value="Exit" (click)="inputExit()"> 
+      </div>
+    </div>    
+  </div>
+</div>

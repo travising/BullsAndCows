@@ -1,0 +1,176 @@
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: url(../../assets/background.jpg) no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+
+  .title {
+    color: white;
+    margin: 0;
+    padding: 50px 20px;
+  }
+
+  #wrapper {
+    /*background-color:#00ccff;*/
+    background: 
+    radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
+    radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
+    radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
+    radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
+    radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
+    radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
+    linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b1284 50%, #760ea1 60%, #83096e 70%, #840b2a 80%, #b13e12 90%, #e27412 100%);
+    background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+    background-color: #840b2a;
+    // padding: 10px;
+    height: 100%; // 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .textbox {
+    margin: 10px;
+    width: 280px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: darkgoldenrod;
+  }
+
+　input:focus {
+    border-color: #ff962d !important;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255,150,43,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255,150,43,.6);
+  }
+
+  .resultbox {
+    margin: 0px 10px 10px 10px;
+    width: 280px;
+    height: 60px;
+    font-size: 15px;
+    background-color: #eee;
+    word-wrap: normal
+  }
+
+  .btn-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 300px;
+  }
+
+  .btn-area input {
+    /*background: url('~@/assets/bg-black.jpg') center center ;*/
+    background:#2c3e50;
+    background-size: 200px auto;
+    color: white;
+    font-size: 18x;
+    margin: 6px 5px;
+    padding: 12px;
+    width: 80px;
+    border: 0px solid;
+    border-radius: 20px;
+  }
+
+  .timerbox {
+    align-items: center;
+    margin: 10px 5px 10px 5px;
+    width: 300px;
+    height: 21px;
+    font-size: 13px;
+    color: pink;
+    background:rgba(0,0,0,0);
+    border-style: none;
+    resize: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+  }
+
+  .player {
+    background-color:rgba(115, 207, 169, 0.8);
+    position:absolute; /*绝对定位*/ 
+    top:50%; /*距顶部50%*/ 
+    left:50%; 
+    margin:-85px 0 0 -100px; /*设定这个div的margin-top的负值为自身的高度的一半,margin-left的值也是自身的宽度的一半的负值.(感觉在绕口令)*/ 
+    width:200px; /*宽为400,那么margin-top为-200px*/ 
+    height:130px; /*高为200那么margin-left为-100px;*/ 
+    z-index:99; /*浮动在最上层 */ 
+    border-radius: 10px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+  }
+
+  .player input{
+    width: 160px;
+    height: 35px;
+    margin: 20px 0px 0px 0px;
+    text-align:center;
+    border-radius: 5px;
+    border-style: none;
+  }
+
+  .button{
+    background-color: blueviolet;
+    color: white;
+  }
+
+  .buttonOK{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    background-color: rgba(60, 60, 255, 0.8);
+    color: white;
+    align-items:right;
+    border-radius: 5px;
+    border-style: none;
+  }
+
+  .dialog {
+    background-color: rgba(100, 200, 200, 0.9);
+    position:absolute; /*绝对定位*/ 
+    top:50%; /*距顶部50%*/ 
+    left:50%; 
+    margin:-130px 0 0 -130px; /*设定这个div的margin-top的负值为自身的高度的一半,margin-left的值也是自身的宽度的一半的负值.(感觉在绕口令)*/ 
+    width:260px; /*宽为400,那么margin-top为-200px*/ 
+    height:200px; /*高为200那么margin-left为-100px;*/ 
+    z-index:99; /*浮动在最上层 */ 
+    border-radius: 10px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;   
+  }
+
+  .dialogContent {
+    width: 250px; /*宽为400,那么margin-top为-200px*/ 
+    height: 110px;    
+    border-style: none;
+    resize: none;
+    padding: 5px;
+    border-radius: 0px 0px 10px 10px;   
+    background-color: rgba(100, 200, 200, 0);
+  }
+
+  .dialogTitle {
+    width: 260px; /*宽为400,那么margin-top为-200px*/ 
+    height: 30px;
+    padding: 0px;
+    border-style: none;
+    resize: none;    
+    background-color: rgba(60, 60, 255, 0.8);
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    line-height: 30px; /*垂直居中*/
+    color: white;
+    font-size: 16px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }  
+}
